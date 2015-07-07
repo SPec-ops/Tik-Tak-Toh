@@ -19,7 +19,9 @@ public class TikTakToh {
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TikTakTohWindow().setVisible(true);
+                TikTakTohWindow game = new TikTakTohWindow();
+                game.setTitle("Tik-Tak-Toh");
+                game.setVisible(true);
             }
         });
     }
