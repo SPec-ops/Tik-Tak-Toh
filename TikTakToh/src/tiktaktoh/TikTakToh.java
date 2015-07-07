@@ -15,5 +15,12 @@ public class TikTakToh {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        //TikTakTohWindow game = new TikTakTohWindow();
+        
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new TikTakTohWindow().setVisible(true);
+            }
+        });
     }
 }
