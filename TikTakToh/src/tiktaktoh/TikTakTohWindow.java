@@ -108,6 +108,11 @@ public class TikTakTohWindow extends javax.swing.JFrame {
         });
 
         jButton10.setText("Start");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
         jButton11.setText("Reset");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
@@ -117,7 +122,9 @@ public class TikTakTohWindow extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setSelected(true);
         jRadioButton1.setText("1 Player");
+        jRadioButton1.setEnabled(false);
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton1ActionPerformed(evt);
@@ -286,16 +293,28 @@ public class TikTakTohWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-        
+        // setting 1 player mode
+        jRadioButton1.setEnabled(false);
+        jRadioButton2.setEnabled(true);
+        jLabel2.setText("Computer");
+        jButton11ActionPerformed(evt);
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        // TODO add your handling code here:
+        // setting 2 player mode
+        jRadioButton2.setEnabled(false);
+        jRadioButton1.setEnabled(true);
+        jLabel2.setText("Player 2");
+        jButton11ActionPerformed(evt);
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
+        //resetting the game
+        jButton10ActionPerformed(evt);
+        // resetting the counter
+        jLabel4.setText(": 0");
+        jLabel5.setText(": 0");
+        jLabel6.setText(": 0");
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -307,6 +326,19 @@ public class TikTakTohWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
         buttonClick(evt);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+        jButton1.setText("");jButton1.setEnabled(true);
+        jButton2.setText("");jButton2.setEnabled(true);
+        jButton3.setText("");jButton3.setEnabled(true);
+        jButton4.setText("");jButton4.setEnabled(true);
+        jButton5.setText("");jButton5.setEnabled(true);
+        jButton6.setText("");jButton6.setEnabled(true);
+        jButton7.setText("");jButton7.setEnabled(true);
+        jButton8.setText("");jButton8.setEnabled(true);
+        jButton9.setText("");jButton9.setEnabled(true);
+    }//GEN-LAST:event_jButton10ActionPerformed
     
     //method to call when a square is clicked-S
     private void buttonClick(java.awt.event.ActionEvent e){
@@ -315,6 +347,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {
         else
             ((javax.swing.JButton)(e.getSource())).setText("O");
         chancePlayer1= !chancePlayer1;      //change the sign of next click-S
+        ((javax.swing.JButton)(e.getSource())).setEnabled(false);
     }
     /**
      * @param args the command line arguments
