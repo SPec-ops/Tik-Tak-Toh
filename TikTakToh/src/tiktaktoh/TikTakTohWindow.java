@@ -4,19 +4,37 @@
  */
 package tiktaktoh;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author SHAEDI
  */
 public class TikTakTohWindow extends javax.swing.JFrame {
+        
+    Game game;                              // game play
     
-    private boolean chancePlayer1 = true;       //variable to decide whose turn and which mark to appear-S
+    private JButton[][] buttons;         //button array
+    
+    
     /**
      * Creates new form TikTakTohWindow
      */
     public TikTakTohWindow() {
         initComponents();
-                
+        
+        buttons =new JButton[3][3];
+        buttons[0][0] = jButton1;     //adding buttons to array-S is there any easy way?
+        buttons[0][1] = jButton2;
+        buttons[0][2] = jButton3;
+        buttons[1][0] = jButton4;
+        buttons[1][1] = jButton5;
+        buttons[1][2] = jButton6;
+        buttons[2][0] = jButton7;
+        buttons[2][1] = jButton8;
+        buttons[2][2] = jButton9;
+        
+        game =new Game(buttons);
     }
 
     /**
@@ -207,12 +225,13 @@ public class TikTakTohWindow extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton10)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton11))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton10)
+                        .addComponent(jRadioButton1)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton11)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton2)
@@ -225,8 +244,8 @@ public class TikTakTohWindow extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -328,7 +347,12 @@ public class TikTakTohWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
+        //decide whose chance
+        if(game.player1First==true)
+            game.chancePlayer1=true;
+        else
+            game.chancePlayer1=false;
+        // Start - reset buttons
         jButton1.setText("");jButton1.setEnabled(true);
         jButton2.setText("");jButton2.setEnabled(true);
         jButton3.setText("");jButton3.setEnabled(true);
@@ -342,11 +366,12 @@ public class TikTakTohWindow extends javax.swing.JFrame {
     
     //method to call when a square is clicked-S
     private void buttonClick(java.awt.event.ActionEvent e){
-        if(chancePlayer1==true)
+        game.clickCount++;
+        if(game.chancePlayer1==true)
             ((javax.swing.JButton)(e.getSource())).setText("X");
         else
             ((javax.swing.JButton)(e.getSource())).setText("O");
-        chancePlayer1= !chancePlayer1;      //change the sign of next click-S
+        game.chancePlayer1= !game.chancePlayer1;      //change the sign of next click-S
         ((javax.swing.JButton)(e.getSource())).setEnabled(false);
     }
     /**
