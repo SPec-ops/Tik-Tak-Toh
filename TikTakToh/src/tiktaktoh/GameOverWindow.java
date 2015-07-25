@@ -4,6 +4,8 @@
  */
 package tiktaktoh;
 
+import java.awt.event.WindowEvent;
+
 /**
  *
  * @author SHAEDI
@@ -13,8 +15,14 @@ public class GameOverWindow extends javax.swing.JFrame {
     /**
      * Creates new form GameOverWindow
      */
-    public GameOverWindow() {
+    private Game g;     //keep reference to the game
+    private GameOverWindow o;
+    
+    public GameOverWindow(Game game) {
         initComponents();
+        
+        this.g=game;
+        setInfo();
     }
 
     
@@ -35,6 +43,7 @@ public class GameOverWindow extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Game Over!");
 
         jLabel1.setText("Game Over!");
 
@@ -53,8 +62,18 @@ public class GameOverWindow extends javax.swing.JFrame {
         jLabel8.setText(": 0");
 
         jButton1.setText("Play Again");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("End Game");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -123,6 +142,32 @@ public class GameOverWindow extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // play again
+        g.window.startGame();    //jbtn 10 action
+        this.dispose();
+        //this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));        // closing both windows
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // End game
+        g.window.resetGame();   //jbtn11
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+    
+    private void setInfo(){
+        if(g.singlePlayerMode==true){
+            //jLabel2.setText("");      //who won
+            jLabel4.setText("Computer");
+        }
+        else{
+            jLabel4.setText("Player 2");
+        }
+        jLabel6.setText(": "+g.player1Score);
+        jLabel7.setText(": "+g.player2Score);
+        jLabel8.setText(": "+g.tied);
+    }
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

@@ -69,6 +69,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Tik - Tak - Toh");
 
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -311,6 +312,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // setting 1 player mode
+        g.singlePlayerMode=true;
         jRadioButton1.setEnabled(false);
         jRadioButton2.setEnabled(true);
         jLabel2.setText("Computer");
@@ -319,6 +321,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         // setting 2 player mode
+        g.singlePlayerMode=false;
         jRadioButton2.setEnabled(false);
         jRadioButton1.setEnabled(true);
         jLabel2.setText("Player 2");
@@ -373,6 +376,16 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
         
         g.gameWin();
         g.chancePlayer1= !g.chancePlayer1;      //change the sign of next click-S
+    }
+    
+    //method to call jButton10ActionPerformed method 
+    protected void startGame(){
+        jButton10ActionPerformed(null);
+    }
+    
+    //method to call jButton11ActionPerformed method
+    protected void resetGame(){
+        jButton11ActionPerformed(null);
     }
     /**
      * @param args the command line arguments

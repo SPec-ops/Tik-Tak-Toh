@@ -22,12 +22,15 @@ public class Game implements Runnable{
     protected boolean chancePlayer1 = true;       //variable to decide whose turn and which mark to appear-S
     protected boolean player1First = true;      //who is starting the game
     
+    //game info
+    protected boolean singlePlayerMode = true;
     protected int player1Score =0;
-    protected int player2Score =0;
-    protected int compScore=0;
-    protected int tied =0;
+    protected int player2Score =5;
+    //protected int compScore=0;
+    protected int tied =22;
     
-    private TikTakTohWindow window;     //game has a window
+    Game currentGame =this;           //is this correct?
+    protected TikTakTohWindow window;     //game has a window
     private GameOverWindow gameOverWindow;
     
     public Game(){      //adding the buttons array-s  ,done in run method
@@ -60,8 +63,9 @@ public class Game implements Runnable{
             }
             
             java.awt.EventQueue.invokeLater(new Runnable() {
+                
                 public void run() {
-                    gameOverWindow =new GameOverWindow();
+                    gameOverWindow =new GameOverWindow(currentGame);
                     gameOverWindow.setVisible(true);
                     //set display
                 }
