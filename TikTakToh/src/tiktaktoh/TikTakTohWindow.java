@@ -274,7 +274,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 346, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -338,12 +338,12 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // resetting the counter
+        g.player1Score=0;
+        g.player2Score=0;
+        g.tied=0;
         //resetting the game
         jButton10ActionPerformed(evt);
-        // resetting the counter
-        jLabel4.setText(": 0");
-        jLabel5.setText(": 0");
-        jLabel6.setText(": 0");
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -357,6 +357,11 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        g.winner="n";
+        //set counters
+        jLabel4.setText(": "+g.player1Score);
+        jLabel5.setText(": "+g.player2Score);
+        jLabel6.setText(": "+g.tied);
         //decide whose chance
         if(g.player1First==true)
             g.chancePlayer1=true;
@@ -416,9 +421,9 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    protected javax.swing.JLabel jLabel4;
+    protected javax.swing.JLabel jLabel5;
+    protected javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;

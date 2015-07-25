@@ -110,8 +110,8 @@ public class GameOverDialogBox extends javax.swing.JDialog {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(172, 172, 172)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(74, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -167,8 +167,13 @@ public class GameOverDialogBox extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton2ActionPerformed
     
     private void setInfo(){
+        if("p2".equals(g.winner)){
+            jLabel2.setText("Player 2 Won!");      //who won
+        }
+        else if("t".equals(g.winner)){
+            jLabel2.setText("Draw!");
+        }
         if(g.singlePlayerMode==true){
-            //jLabel2.setText("");      //who won
             jLabel4.setText("Computer");
         }
         else{

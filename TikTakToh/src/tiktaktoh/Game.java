@@ -25,9 +25,10 @@ public class Game implements Runnable{
     //game info
     protected boolean singlePlayerMode = true;
     protected int player1Score =0;
-    protected int player2Score =5;
+    protected int player2Score =0;
     //protected int compScore=0;
-    protected int tied =22;
+    protected int tied =0;
+    protected String winner="n";
     
     Game currentGame =this;           //is this correct?
     protected TikTakTohWindow window;     //game has a window
@@ -50,35 +51,38 @@ public class Game implements Runnable{
         {
             //who wins
             if(chancePlayer1==true){
-
+                winner="p1";
+                player1Score++;
+            }else{
+                winner="p2";
+                player2Score++;
             }
-            
+        }
+        else if(clickCount==9){         //tied
+            winner="t";
+            tied++;
+            clickCount=0;
+        }
+        //game over window
+        if(!"n".equals(winner)){
             java.awt.EventQueue.invokeLater(new Runnable() {
-                
                 @Override
                 public void run() {
-                    
                     gameOverWindow =new GameOverDialogBox(window,true,currentGame);
-                    
                     gameOverWindow.addWindowListener(new java.awt.event.WindowAdapter() {
                         @Override
                         public void windowClosing(java.awt.event.WindowEvent e) {
                             System.exit(0);
                         }
-                    });
-                                        
-                    gameOverWindow.setVisible(true);
-                    //set display
+                    });                    
+                    gameOverWindow.setVisible(true);//set display
                 }
             });
                 
             clickCount=0;
             player1First = !player1First;
-            //return
+            return 0;
         }
-        //tied
-        clickCount=0;
-        player1First = !player1First;
         return 0;
     }
 
