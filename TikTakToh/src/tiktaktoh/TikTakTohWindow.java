@@ -26,10 +26,10 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
         buttons[0][0] = jButton1;     //adding buttons to array-S is there any easy way?
         buttons[0][1] = jButton2;
         buttons[0][2] = jButton3;
-        buttons[1][0] = jButton4;
-        buttons[1][1] = jButton5;
-        buttons[1][2] = jButton6;
-        buttons[2][0] = jButton7;
+        buttons[1][0] = jButton5;
+        buttons[1][1] = jButton4;
+        buttons[1][2] = jButton7;
+        buttons[2][0] = jButton6;
         buttons[2][1] = jButton8;
         buttons[2][2] = jButton9;
         
@@ -77,48 +77,57 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             }
         });
 
+        jButton2.setText("  ");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
+        jButton3.setText("   ");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
 
+        jButton4.setText("     ");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
 
+        jButton5.setText("    ");
+        jButton5.setToolTipText("");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
 
+        jButton6.setText("        ");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
 
+        jButton7.setText("      ");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
 
+        jButton8.setText("         ");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
             }
         });
 
+        jButton9.setText("           ");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -265,7 +274,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 346, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -355,14 +364,14 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             g.chancePlayer1=false;
         // Start - reset buttons
         jButton1.setText("");jButton1.setEnabled(true);
-        jButton2.setText("");jButton2.setEnabled(true);
-        jButton3.setText("");jButton3.setEnabled(true);
-        jButton4.setText("");jButton4.setEnabled(true);
-        jButton5.setText("");jButton5.setEnabled(true);
-        jButton6.setText("");jButton6.setEnabled(true);
-        jButton7.setText("");jButton7.setEnabled(true);
-        jButton8.setText("");jButton8.setEnabled(true);
-        jButton9.setText("");jButton9.setEnabled(true);
+        jButton2.setText(" ");jButton2.setEnabled(true);
+        jButton3.setText("  ");jButton3.setEnabled(true);
+        jButton4.setText("   ");jButton4.setEnabled(true);
+        jButton5.setText("    ");jButton5.setEnabled(true);
+        jButton6.setText("     ");jButton6.setEnabled(true);
+        jButton7.setText("      ");jButton7.setEnabled(true);
+        jButton8.setText("       ");jButton8.setEnabled(true);
+        jButton9.setText("        ");jButton9.setEnabled(true);
     }//GEN-LAST:event_jButton10ActionPerformed
     
     //method to call when a square is clicked-S

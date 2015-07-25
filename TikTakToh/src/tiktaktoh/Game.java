@@ -31,21 +31,11 @@ public class Game implements Runnable{
     
     Game currentGame =this;           //is this correct?
     protected TikTakTohWindow window;     //game has a window
-    private GameOverWindow gameOverWindow;
     
-    public Game(){      //adding the buttons array-s  ,done in run method
+    private GameOverDialogBox gameOverWindow;   //dialogbox
+    
+    public Game(){    
         
-        /*
-        final Game currentGame =this;           //is this correct?
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                TikTakTohWindow window = new TikTakTohWindow(clickCount,chancePlayer1,player1First,currentGame);
-                window.setTitle("Tik-Tak-Toh");
-                window.setVisible(true);
-                buttons = window.buttons;
-            }
-        });
-        */
     }
     
     protected int gameWin(){
@@ -56,21 +46,32 @@ public class Game implements Runnable{
                 ((window.buttons[0][1].getText().equals(window.buttons[1][1].getText())) && (window.buttons[0][1].getText().equals(window.buttons[2][1].getText()))) ||
                 ((window.buttons[0][2].getText().equals(window.buttons[1][2].getText())) && (window.buttons[0][2].getText().equals(window.buttons[2][2].getText()))) ||
                 ((window.buttons[0][0].getText().equals(window.buttons[1][1].getText())) && (window.buttons[0][0].getText().equals(window.buttons[2][2].getText()))) ||
-                ((window.buttons[0][2].getText().equals(window.buttons[1][1].getText())) && (window.buttons[0][2].getText().equals(window.buttons[2][0].getText())))){
+                ((window.buttons[0][2].getText().equals(window.buttons[1][1].getText())) && (window.buttons[0][2].getText().equals(window.buttons[2][0].getText()))))
+        {
             //who wins
             if(chancePlayer1==true){
-                
+
             }
             
             java.awt.EventQueue.invokeLater(new Runnable() {
                 
+                @Override
                 public void run() {
-                    gameOverWindow =new GameOverWindow(currentGame);
+                    
+                    gameOverWindow =new GameOverDialogBox(window,true,currentGame);
+                    
+                    gameOverWindow.addWindowListener(new java.awt.event.WindowAdapter() {
+                        @Override
+                        public void windowClosing(java.awt.event.WindowEvent e) {
+                            System.exit(0);
+                        }
+                    });
+                                        
                     gameOverWindow.setVisible(true);
                     //set display
                 }
             });
-            
+                
             clickCount=0;
             player1First = !player1First;
             //return
