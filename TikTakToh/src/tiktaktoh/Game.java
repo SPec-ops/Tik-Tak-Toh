@@ -11,6 +11,9 @@
 
 package tiktaktoh;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author SHAEDI
@@ -35,8 +38,12 @@ public class Game implements Runnable{
     
     private GameOverDialogBox gameOverWindow;   //dialogbox
     
+    protected Computer computer;
+    protected final Thread compThread;      //new thread for the computer
+    
     public Game(){    
-        
+        computer = new Computer(this);  // making the new computer when stating the game
+        compThread = new Thread(computer);    
     }
     
     protected int gameWin(){
@@ -65,6 +72,13 @@ public class Game implements Runnable{
         }
         //game over window
         if(!"n".equals(winner)){
+            synchronized(compThread){
+            try {       //pause the computer
+                compThread.wait();
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Game.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            }
             java.awt.EventQueue.invokeLater(new Runnable() {
                 @Override
                 public void run() {
@@ -91,5 +105,6 @@ public class Game implements Runnable{
         //throw new UnsupportedOperationException("Not supported yet.");
         window = new TikTakTohWindow(this);
         window.setVisible(true);
+        compThread.start(); //starting computer--- is this okay???
     }
 }

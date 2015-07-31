@@ -359,6 +359,11 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        synchronized(g.compThread){
+            if(g.singlePlayerMode==true){   
+                g.compThread.notify();
+            }
+        }
         g.winner="n";
         g.clickCount=0;
         //set counters
@@ -385,10 +390,12 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
     //method to call when a square is clicked-S
     private void buttonClick(java.awt.event.ActionEvent e){
         g.clickCount++;
-        if(g.chancePlayer1==true)
+        if(g.chancePlayer1==true) {
             ((javax.swing.JButton)(e.getSource())).setText("X");
-        else
+        }
+        else {
             ((javax.swing.JButton)(e.getSource())).setText("O");
+        }
         ((javax.swing.JButton)(e.getSource())).setEnabled(false);
         
         g.gameWin();
