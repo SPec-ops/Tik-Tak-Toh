@@ -339,6 +339,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // resetting the counter
+        g.player1First=true;
         g.player1Score=0;
         g.player2Score=0;
         g.tied=0;
