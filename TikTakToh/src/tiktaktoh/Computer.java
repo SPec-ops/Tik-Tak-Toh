@@ -10,11 +10,13 @@ import java.util.Random;
  *
  * @author SHAEDI
  */
-public class Computer implements Runnable{
+public class Computer {
     
     private Game g;     //keep reference to the game
     
     Random rand;
+    
+    boolean isOn =true;
     
     public Computer(Game game){
         this.g=game;
@@ -23,6 +25,9 @@ public class Computer implements Runnable{
     }
     
     protected void randomComputerMove(){
+        if(g.chancePlayer1==true){
+            return;
+        }
         boolean moved = false;
         while (moved==false){
             int move = rand.nextInt(8);
@@ -31,33 +36,13 @@ public class Computer implements Runnable{
             if(!"O".equals(g.window.buttons[row][column].getText()) && !"X".equals(g.window.buttons[row][column].getText())){
                 
                 g.clickCount++;
-                if(g.chancePlayer1==true) {
-                    g.window.buttons[row][column].setText("X");
-                }
-                else {
-                    g.window.buttons[row][column].setText("O");
-                }
+                g.window.buttons[row][column].setText("O");
                 g.window.buttons[row][column].setEnabled(false);
         
                 g.gameWin();
                 g.chancePlayer1= !g.chancePlayer1;      //change the sign of next click-S
                 
                 moved=true;
-            }
-        }
-    }
-
-    @Override
-    public void run() {
-        //throw new UnsupportedOperationException("Not supported yet.");
-        computerRun();
-    }
-
-    private void computerRun() {
-        //throw new UnsupportedOperationException("Not yet implemented");
-        while(true){
-            if(!g.chancePlayer1){
-                randomComputerMove();
             }
         }
     }

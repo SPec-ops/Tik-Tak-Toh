@@ -168,7 +168,12 @@ public class GameOverDialogBox extends javax.swing.JDialog {
     
     private void setInfo(){
         if("p2".equals(g.winner)){
-            jLabel2.setText("Player 2 Won!");      //who won
+            if(g.singlePlayerMode==true){
+                jLabel2.setText("Computer Won!");      //who won
+            }
+            else{
+                jLabel2.setText("Player 2 Won!");      //who won
+            }
         }
         else if("t".equals(g.winner)){
             jLabel2.setText("Draw!");

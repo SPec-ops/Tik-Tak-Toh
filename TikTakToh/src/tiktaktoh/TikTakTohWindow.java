@@ -15,7 +15,6 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
     
     protected JButton[][] buttons;         //button array
     
-    //TikTakTohWindow gameWindow;  //making window runnable
     /**
      * Creates new form TikTakTohWindow
      */
@@ -359,11 +358,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        synchronized(g.compThread){
-            if(g.singlePlayerMode==true){   
-                g.compThread.notify();
-            }
-        }
+        g.computer.isOn=true;
         g.winner="n";
         g.clickCount=0;
         //set counters
@@ -385,6 +380,10 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
         jButton7.setText("      ");jButton7.setEnabled(true);
         jButton8.setText("       ");jButton8.setEnabled(true);
         jButton9.setText("        ");jButton9.setEnabled(true);
+        
+        if(g.singlePlayerMode==true && g.chancePlayer1==false){
+            g.computer.randomComputerMove();
+        }
     }//GEN-LAST:event_jButton10ActionPerformed
     
     //method to call when a square is clicked-S
@@ -400,6 +399,10 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
         
         g.gameWin();
         g.chancePlayer1= !g.chancePlayer1;      //change the sign of next click-S
+        
+        if(g.singlePlayerMode==true && g.chancePlayer1==false && g.computer.isOn){
+            g.computer.randomComputerMove();
+        }
     }
     
     //method to call jButton10ActionPerformed method 
@@ -440,11 +443,4 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
     private javax.swing.JRadioButton jRadioButton2;
     // End of variables declaration//GEN-END:variables
     
-    /*
-    @Override
-    public void run() {
-        //throw new UnsupportedOperationException("Not supported yet.");
-        gameWindow= new TikTakTohWindow(clickCount, chancePlayer1, player1First, this);
-    }
-    */
 }
