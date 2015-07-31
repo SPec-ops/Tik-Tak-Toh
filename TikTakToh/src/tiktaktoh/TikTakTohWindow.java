@@ -343,6 +343,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
         g.player2Score=0;
         g.tied=0;
         //resetting the game
+        g.player1First=true;
         jButton10ActionPerformed(evt);
     }//GEN-LAST:event_jButton11ActionPerformed
 
@@ -358,6 +359,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         g.winner="n";
+        g.clickCount=0;
         //set counters
         jLabel4.setText(": "+g.player1Score);
         jLabel5.setText(": "+g.player2Score);
