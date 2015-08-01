@@ -28,6 +28,15 @@ public class Computer {
         if(g.chancePlayer1==true){
             return;
         }
+        //fill the middle box if empty
+        if(!"O".equals(g.window.buttons[1][1].getText()) && !"X".equals(g.window.buttons[1][1].getText())){
+            g.clickCount++;
+            g.window.buttons[1][1].setText("O");
+            g.window.buttons[1][1].setEnabled(false);
+            g.gameWin();
+            g.chancePlayer1= !g.chancePlayer1;      //change the sign of next click-S
+            return;
+        }
         boolean moved = false;
         while (moved==false){
             int move = rand.nextInt(8);
