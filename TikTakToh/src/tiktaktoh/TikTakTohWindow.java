@@ -5,6 +5,7 @@
 package tiktaktoh;
 
 import javax.swing.JButton;
+import org.apache.log4j.Logger;
 
 /**
  *
@@ -15,10 +16,13 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
     
     protected JButton[][] buttons;         //button array
     
+    private static Logger logger = Logger.getLogger(TikTakTohWindow.class);
+    
     /**
      * Creates new form TikTakTohWindow
      */
     public TikTakTohWindow(Game game) {
+        
         initComponents();
         
         buttons =new JButton[3][3];
@@ -286,36 +290,43 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
         buttonClick(evt);
+        logger.debug("Clicked button [2][2]");
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
         buttonClick(evt);
+        logger.debug("Clicked button [2][1]");
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
         buttonClick(evt);
+        logger.debug("Clicked button [1][2]");
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
         buttonClick(evt);
+        logger.debug("Clicked button [2][0]");
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         buttonClick(evt);
+        logger.debug("Clicked button [1][0]");
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         buttonClick(evt);
+        logger.debug("Clicked button [1][1]");
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         buttonClick(evt);
+        logger.debug("Clicked button [0][2]");
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
@@ -324,6 +335,9 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
         jRadioButton1.setEnabled(false);
         jRadioButton2.setEnabled(true);
         jLabel2.setText("Computer");
+        
+        logger.warn("Computer vs Player");
+        
         jButton11ActionPerformed(evt);
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
@@ -333,6 +347,9 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
         jRadioButton2.setEnabled(false);
         jRadioButton1.setEnabled(true);
         jLabel2.setText("Player 2");
+        
+        logger.warn("Player vs Player");
+        
         jButton11ActionPerformed(evt);
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
@@ -350,11 +367,13 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         buttonClick(evt);
+        logger.debug("Clicked button [0][0]");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         buttonClick(evt);
+        logger.debug("Clicked button [0][1]");
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
@@ -370,6 +389,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             g.chancePlayer1=true;
         else
             g.chancePlayer1=false;
+        
         // Start - reset buttons
         jButton1.setText("");jButton1.setEnabled(true);
         jButton2.setText(" ");jButton2.setEnabled(true);
@@ -384,6 +404,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
         if(g.singlePlayerMode==true && g.chancePlayer1==false){
             g.computer.randomComputerMove();
         }
+        
     }//GEN-LAST:event_jButton10ActionPerformed
     
     //method to call when a square is clicked-S
@@ -408,11 +429,13 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
     //method to call jButton10ActionPerformed method 
     protected void startGame(){
         jButton10ActionPerformed(null);
+        logger.info("Game started!");
     }
     
     //method to call jButton11ActionPerformed method
     protected void resetGame(){
         jButton11ActionPerformed(null);
+        logger.info("Game reseted!");
     }
     /**
      * @param args the command line arguments

@@ -11,9 +11,7 @@
 
 package tiktaktoh;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
+import org.apache.log4j.Logger;
 /**
  *
  * @author SHAEDI
@@ -39,14 +37,17 @@ public class Game implements Runnable{
     private GameOverDialogBox gameOverWindow;   //dialogbox
     
     protected Computer computer;
+    
+    private static Logger logger = Logger.getLogger(Game.class);
 
     
     public Game(){    
         computer = new Computer(this);  // making the new computer when stating the game
-
+        
     }
     
     protected int gameWin(){
+        
         if(((window.buttons[0][0].getText().equals(window.buttons[0][1].getText())) && (window.buttons[0][0].getText().equals(window.buttons[0][2].getText()))) || 
             ((window.buttons[1][0].getText().equals(window.buttons[1][1].getText())) && (window.buttons[1][0].getText().equals(window.buttons[1][2].getText()))) ||
                 ((window.buttons[2][0].getText().equals(window.buttons[2][1].getText())) && (window.buttons[2][0].getText().equals(window.buttons[2][2].getText()))) ||
@@ -59,15 +60,21 @@ public class Game implements Runnable{
             //who wins
             if(chancePlayer1==true){
                 winner="p1";
+                logger.info("Player 1 won");
                 player1Score++;
+                logger.info("Player 1 Score = " + player1Score );
             }else{
                 winner="p2";
+                logger.info("Player 2 won");
                 player2Score++;
+                logger.info("Player 2 Score = " + player2Score );
             }
         }
         else if(clickCount==9){         //tied
             winner="t";
             tied++;
+            logger.info("Game tied");
+            logger.info("Tied matches Score = " + tied );
             clickCount=0;
         }
         //game over window
