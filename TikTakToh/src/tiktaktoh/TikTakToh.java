@@ -4,6 +4,10 @@
  */
 package tiktaktoh;
 
+import org.apache.log4j.PropertyConfigurator;
+
+
+
 /**
  *
  * @author SHAEDI
@@ -17,6 +21,7 @@ public class TikTakToh {
         // TODO code application logic here
         Game game = new Game();
         
+        PropertyConfigurator.configure("log4j.properties");
         Thread t = new Thread(game);        //is it ok to run in a new thread
         t.start();
     }

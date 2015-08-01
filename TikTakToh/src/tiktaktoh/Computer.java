@@ -3,9 +3,11 @@
  * and open the template in the editor.
  */
 package tiktaktoh;
+//package org.logging.learn.main;
 
 import java.util.Random;
 
+import org.apache.log4j.Logger;
 /**
  *
  * @author SHAEDI
@@ -18,6 +20,8 @@ public class Computer {
     
     boolean isOn =true;
     
+    private static Logger logger = Logger.getLogger(Computer.class);
+    
     public Computer(Game game){
         this.g=game;
         
@@ -25,6 +29,7 @@ public class Computer {
     }
     
     protected void randomComputerMove(){
+        
         if(g.chancePlayer1==true){
             return;
         }
