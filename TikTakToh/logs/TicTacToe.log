@@ -1,8 +1,0 @@
-2015 Aug 01 15:59:58,826 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][2]
-2015 Aug 01 16:00:02,074 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][1]
-2015 Aug 01 16:00:02,938 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][1]
-2015 Aug 01 16:00:04,402 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 1 won
-2015 Aug 01 16:00:04,402 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 1 Score = 1
-2015 Aug 01 16:00:04,405 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][0]
-2015 Aug 01 16:00:07,306 INFO  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - player move
-2015 Aug 01 16:00:07,306 INFO  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Game reseted!
