@@ -21,7 +21,7 @@ public class TikTakToh {
         // TODO code application logic here
         Game game = new Game();
         
-        PropertyConfigurator.configure("log4j.properties");
+        PropertyConfigurator.configure("resources/log4j.properties");
         Thread t = new Thread(game);        //is it ok to run in a new thread
         t.start();
     }
