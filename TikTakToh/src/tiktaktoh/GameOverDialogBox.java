@@ -4,6 +4,13 @@
  */
 package tiktaktoh;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 
 /**
@@ -15,6 +22,12 @@ public class GameOverDialogBox extends javax.swing.JDialog {
     /**
      * Creates new form GameOverDialogBox
      */
+    // JDBC driver name and database URL
+    final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
+    final String DB_URL = "jdbc:mysql://localhost/tiktaktohdatabase";
+    
+    Connection conn = null;
+    Statement stmt = null;
     
     private Game g;     //keep reference to the game
     
@@ -161,7 +174,18 @@ public class GameOverDialogBox extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // End game
+        try {
+            // End game
+            conn = DriverManager.getConnection(DB_URL,"root","711246252");
+            stmt = conn.createStatement();
+            String sql;
+            
+            sql = "INSERT INTO sessionresults (SinglePlayerMode,Player1 , Player2 , Tied) values ("+g.singlePlayerMode+", "+g.player1Score+", "+g.player2Score+","+g.tied+")";
+            stmt.executeUpdate(sql);
+        } catch (SQLException ex) {
+            Logger.getLogger(GameOverDialogBox.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         g.window.resetGame();   //jbtn11
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
