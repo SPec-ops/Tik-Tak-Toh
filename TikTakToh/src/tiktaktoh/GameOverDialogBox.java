@@ -98,6 +98,7 @@ public class GameOverDialogBox extends javax.swing.JDialog {
 
         jLabel8.setText(": 0");
 
+        jButton1.setBackground(new java.awt.Color(255, 0, 51));
         jButton1.setText("Play Again");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,6 +106,7 @@ public class GameOverDialogBox extends javax.swing.JDialog {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(255, 0, 51));
         jButton2.setText("End Game");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

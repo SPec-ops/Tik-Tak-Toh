@@ -98,6 +98,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
+        jButton1.setBackground(new java.awt.Color(102, 255, 51));
         jButton1.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,6 +106,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(102, 255, 51));
         jButton2.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jButton2.setText("  ");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -113,6 +115,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(102, 255, 51));
         jButton3.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jButton3.setText("   ");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -121,6 +124,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             }
         });
 
+        jButton4.setBackground(new java.awt.Color(102, 255, 51));
         jButton4.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jButton4.setText("     ");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -129,6 +133,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             }
         });
 
+        jButton5.setBackground(new java.awt.Color(102, 255, 51));
         jButton5.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jButton5.setText("    ");
         jButton5.setToolTipText("");
@@ -138,6 +143,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             }
         });
 
+        jButton6.setBackground(new java.awt.Color(102, 255, 51));
         jButton6.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jButton6.setText("        ");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -146,6 +152,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             }
         });
 
+        jButton7.setBackground(new java.awt.Color(102, 255, 51));
         jButton7.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jButton7.setText("      ");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -154,6 +161,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             }
         });
 
+        jButton8.setBackground(new java.awt.Color(102, 255, 51));
         jButton8.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jButton8.setText("         ");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -162,6 +170,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             }
         });
 
+        jButton9.setBackground(new java.awt.Color(102, 255, 51));
         jButton9.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jButton9.setText("           ");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -170,6 +179,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             }
         });
 
+        jButton10.setBackground(new java.awt.Color(51, 102, 255));
         jButton10.setText("Start");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -177,6 +187,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             }
         });
 
+        jButton11.setBackground(new java.awt.Color(51, 102, 255));
         jButton11.setText("Reset");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,6 +195,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             }
         });
 
+        jRadioButton1.setBackground(new java.awt.Color(249, 242, 38));
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setSelected(true);
         jRadioButton1.setText("1 Player");
@@ -194,6 +206,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             }
         });
 
+        jRadioButton2.setBackground(new java.awt.Color(249, 242, 38));
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setText("2 Players");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
