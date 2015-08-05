@@ -435,7 +435,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
         jButton9.setText("        ");jButton9.setEnabled(true);
         
         if(g.singlePlayerMode==true && g.chancePlayer1==false){
-            g.computer.randomComputerMove();
+            g.computer.intermediateComputerMove();
         }
         
     }//GEN-LAST:event_jButton10ActionPerformed
@@ -455,7 +455,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
         g.chancePlayer1= !g.chancePlayer1;      //change the sign of next click-S
         
         if(g.singlePlayerMode==true && g.chancePlayer1==false && g.computer.isOn){
-            g.computer.randomComputerMove();
+            g.computer.intermediateComputerMove();
         }
     }
     
