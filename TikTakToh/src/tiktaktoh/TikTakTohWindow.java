@@ -4,6 +4,12 @@
  */
 package tiktaktoh;
 
+import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import org.apache.log4j.Logger;
 
@@ -13,6 +19,8 @@ import org.apache.log4j.Logger;
  */
 public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
     private Game g;     //keep reference to the game
+    //bg image
+    BufferedImage img;
     
     protected JButton[][] buttons;         //button array
     
@@ -22,7 +30,12 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
      * Creates new form TikTakTohWindow
      */
     public TikTakTohWindow(Game game) {
-        
+        try {
+            img = ImageIO.read(new File("images/notepad.png"));
+        } catch (IOException ex) {
+            java.util.logging.Logger.getLogger(GameOverDialogBox.class.getName()).log(Level.SEVERE, null, ex);
+        }
+  
         initComponents();
         
         buttons =new JButton[3][3];
@@ -38,6 +51,8 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
         
         this.g=game;
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -49,7 +64,13 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jPanel1 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel(){
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(img, 0, 0,350,470,null);
+            }
+        };
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -73,13 +94,18 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tik - Tak - Toh");
+        setBackground(new java.awt.Color(0, 153, 255));
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jButton1.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jButton2.setText("  ");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,6 +113,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             }
         });
 
+        jButton3.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jButton3.setText("   ");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,6 +121,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             }
         });
 
+        jButton4.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jButton4.setText("     ");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,6 +129,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             }
         });
 
+        jButton5.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jButton5.setText("    ");
         jButton5.setToolTipText("");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -109,6 +138,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             }
         });
 
+        jButton6.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jButton6.setText("        ");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,6 +146,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             }
         });
 
+        jButton7.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jButton7.setText("      ");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,6 +154,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             }
         });
 
+        jButton8.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jButton8.setText("         ");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,6 +162,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
             }
         });
 
+        jButton9.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jButton9.setText("           ");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -277,7 +310,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 346, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -461,7 +494,7 @@ public class TikTakTohWindow extends javax.swing.JFrame {//implements Runnable{
     protected javax.swing.JLabel jLabel5;
     protected javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
+    protected javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     // End of variables declaration//GEN-END:variables

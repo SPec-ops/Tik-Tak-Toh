@@ -4,6 +4,9 @@
  */
 package tiktaktoh;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -11,6 +14,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
 /**
@@ -22,6 +26,9 @@ public class GameOverDialogBox extends javax.swing.JDialog {
     /**
      * Creates new form GameOverDialogBox
      */
+    //bg image
+    BufferedImage img;
+    
     // JDBC driver name and database URL
     final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
     final String DB_URL = "jdbc:mysql://localhost/tiktaktohdatabase";
@@ -33,6 +40,11 @@ public class GameOverDialogBox extends javax.swing.JDialog {
     
     public GameOverDialogBox(JFrame main,boolean model,Game game) {
         super(main, model); // makes the dialog modal
+        try {
+            img = ImageIO.read(new File("images/notepad.png"));
+        } catch (IOException ex) {
+            Logger.getLogger(GameOverDialogBox.class.getName()).log(Level.SEVERE, null, ex);
+        }
         initComponents();
         
         this.g=game;
@@ -62,6 +74,7 @@ public class GameOverDialogBox extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Game Over!");
+        setBackground(new java.awt.Color(102, 102, 255));
 
         jLabel1.setText(" Game Over!");
 
