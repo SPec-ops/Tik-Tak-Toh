@@ -248,3 +248,130 @@
 2015 Aug 05 22:20:57,948 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][2]
 2015 Aug 05 22:20:59,077 INFO  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Game started!
 2015 Aug 05 23:57:09,186 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][0]
+2015 Aug 06 00:06:06,285 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][0]
+2015 Aug 06 00:06:07,307 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][1]
+2015 Aug 06 00:06:08,231 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][0]
+2015 Aug 06 00:06:09,540 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 2 won
+2015 Aug 06 00:06:09,541 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 2 Score = 1
+2015 Aug 06 00:06:09,543 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][2]
+2015 Aug 06 00:06:13,252 INFO  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Game reseted!
+2015 Aug 06 00:06:14,190 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][0]
+2015 Aug 06 00:06:14,748 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][0]
+2015 Aug 06 00:06:15,617 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][1]
+2015 Aug 06 00:06:16,385 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 1 won
+2015 Aug 06 00:06:16,385 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 1 Score = 1
+2015 Aug 06 00:06:16,385 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][0]
+2015 Aug 06 00:06:17,729 INFO  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Game reseted!
+2015 Aug 06 00:06:18,558 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][0]
+2015 Aug 06 00:06:19,475 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][0]
+2015 Aug 06 00:06:20,391 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 1 won
+2015 Aug 06 00:06:20,391 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 1 Score = 1
+2015 Aug 06 00:06:20,391 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][0]
+2015 Aug 06 00:06:22,346 INFO  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Game reseted!
+2015 Aug 06 00:06:23,644 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][1]
+2015 Aug 06 00:06:24,896 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][0]
+2015 Aug 06 00:06:26,459 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 1 won
+2015 Aug 06 00:06:26,459 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 1 Score = 1
+2015 Aug 06 00:06:26,460 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][2]
+2015 Aug 06 00:06:27,633 INFO  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Game reseted!
+2015 Aug 06 00:06:56,171 WARN  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Player vs Player
+2015 Aug 06 00:06:57,064 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][1]
+2015 Aug 06 00:06:57,795 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][0]
+2015 Aug 06 00:07:00,989 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][1]
+2015 Aug 06 00:07:01,623 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][2]
+2015 Aug 06 00:07:03,078 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][0]
+2015 Aug 06 00:07:03,663 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][0]
+2015 Aug 06 00:07:04,353 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 1 won
+2015 Aug 06 00:07:04,353 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 1 Score = 1
+2015 Aug 06 00:07:04,354 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][1]
+2015 Aug 06 00:07:06,774 INFO  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Game reseted!
+2015 Aug 06 00:07:07,903 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][0]
+2015 Aug 06 00:07:08,513 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][1]
+2015 Aug 06 00:07:09,272 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][2]
+2015 Aug 06 00:07:10,762 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][2]
+2015 Aug 06 00:07:12,169 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][0]
+2015 Aug 06 00:07:14,354 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][0]
+2015 Aug 06 00:07:17,152 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][2]
+2015 Aug 06 00:07:18,599 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][1]
+2015 Aug 06 00:07:19,230 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 1 won
+2015 Aug 06 00:07:19,231 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 1 Score = 1
+2015 Aug 06 00:07:19,231 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][1]
+2015 Aug 06 00:07:21,129 INFO  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Game reseted!
+2015 Aug 06 01:23:57,983 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][2]
+2015 Aug 06 01:23:58,310 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][1]
+2015 Aug 06 01:23:58,686 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 2 won
+2015 Aug 06 01:23:58,687 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 2 Score = 1
+2015 Aug 06 01:23:58,719 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][2]
+2015 Aug 06 01:24:08,758 INFO  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Game reseted!
+2015 Aug 06 01:25:48,158 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][1]
+2015 Aug 06 01:25:48,764 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][0]
+2015 Aug 06 01:25:49,108 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][1]
+2015 Aug 06 01:25:49,925 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 2 won
+2015 Aug 06 01:25:49,925 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 2 Score = 1
+2015 Aug 06 01:25:49,926 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][2]
+2015 Aug 06 01:26:56,941 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][2]
+2015 Aug 06 01:26:57,244 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][0]
+2015 Aug 06 01:26:57,588 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][1]
+2015 Aug 06 01:26:58,348 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][0]
+2015 Aug 06 01:26:59,124 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Game tied
+2015 Aug 06 01:26:59,124 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Tied matches Score = 1
+2015 Aug 06 01:26:59,125 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][2]
+2015 Aug 06 01:28:44,772 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][2]
+2015 Aug 06 01:28:45,955 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][1]
+2015 Aug 06 01:28:46,218 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][2]
+2015 Aug 06 01:28:46,450 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 1 won
+2015 Aug 06 01:28:46,451 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 1 Score = 1
+2015 Aug 06 01:28:46,452 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][2]
+2015 Aug 06 01:30:43,266 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][2]
+2015 Aug 06 01:30:43,713 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][1]
+2015 Aug 06 01:30:44,344 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][1]
+2015 Aug 06 01:30:44,553 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 2 won
+2015 Aug 06 01:30:44,554 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 2 Score = 1
+2015 Aug 06 01:30:44,557 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][0]
+2015 Aug 06 01:31:47,282 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][2]
+2015 Aug 06 01:31:47,864 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][1]
+2015 Aug 06 01:31:48,096 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 2 won
+2015 Aug 06 01:31:48,096 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 2 Score = 1
+2015 Aug 06 01:31:48,098 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][0]
+2015 Aug 06 01:31:48,426 INFO  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Game started!
+2015 Aug 06 01:31:49,448 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][0]
+2015 Aug 06 01:31:50,151 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][2]
+2015 Aug 06 01:31:50,648 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 2 won
+2015 Aug 06 01:31:50,649 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 2 Score = 2
+2015 Aug 06 01:31:50,649 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][1]
+2015 Aug 06 01:31:55,437 INFO  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Game reseted!
+2015 Aug 06 01:32:02,111 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][2]
+2015 Aug 06 01:32:02,607 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][1]
+2015 Aug 06 01:32:03,064 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][0]
+2015 Aug 06 01:32:03,672 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][2]
+2015 Aug 06 01:32:04,151 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 1 won
+2015 Aug 06 01:32:04,151 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 1 Score = 1
+2015 Aug 06 01:32:04,151 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][2]
+2015 Aug 06 01:32:24,008 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][1]
+2015 Aug 06 01:32:24,608 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][2]
+2015 Aug 06 01:32:24,904 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][2]
+2015 Aug 06 01:32:25,728 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][0]
+2015 Aug 06 01:32:26,984 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Game tied
+2015 Aug 06 01:32:26,984 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Tied matches Score = 1
+2015 Aug 06 01:32:26,985 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][0]
+2015 Aug 06 01:32:32,906 INFO  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Game reseted!
+2015 Aug 06 01:48:08,901 WARN  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Player vs Player
+2015 Aug 06 01:48:09,700 WARN  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Computer vs Player
+2015 Aug 06 01:48:10,579 WARN  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Player vs Player
+2015 Aug 06 01:48:14,371 WARN  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Computer vs Player
+2015 Aug 06 01:49:57,228 WARN  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Player vs Player
+2015 Aug 06 01:49:58,786 WARN  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Computer vs Player
+2015 Aug 06 01:49:59,826 WARN  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Player vs Player
+2015 Aug 06 01:50:00,786 WARN  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Computer vs Player
+2015 Aug 06 01:50:01,458 WARN  [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Player vs Player
+2015 Aug 06 01:50:08,450 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][2]
+2015 Aug 06 01:50:08,806 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][1]
+2015 Aug 06 01:50:09,617 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][0]
+2015 Aug 06 01:50:09,897 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [0][0]
+2015 Aug 06 01:50:10,289 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][1]
+2015 Aug 06 01:50:10,722 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [1][2]
+2015 Aug 06 01:50:11,081 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][1]
+2015 Aug 06 01:50:11,474 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][2]
+2015 Aug 06 01:50:11,849 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 1 won
+2015 Aug 06 01:50:11,849 INFO  [AWT-EventQueue-0]: tiktaktoh.Game - Player 1 Score = 1
+2015 Aug 06 01:50:11,879 DEBUG [AWT-EventQueue-0]: tiktaktoh.TikTakTohWindow - Clicked button [2][0]
