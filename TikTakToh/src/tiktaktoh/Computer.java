@@ -70,6 +70,31 @@ public class Computer {
             for(int j=0;j<3;j++){
                 if(!"O".equals(g.window.buttons[i][j].getText()) && !"X".equals(g.window.buttons[i][j].getText())){
                     String pre=g.window.buttons[i][j].getText();
+                    g.window.buttons[i][j].setText("O");
+                    if(((g.window.buttons[0][0].getText().equals(g.window.buttons[0][1].getText())) && (g.window.buttons[0][0].getText().equals(g.window.buttons[0][2].getText()))) || 
+                        ((g.window.buttons[1][0].getText().equals(g.window.buttons[1][1].getText())) && (g.window.buttons[1][0].getText().equals(g.window.buttons[1][2].getText()))) ||
+                        ((g.window.buttons[2][0].getText().equals(g.window.buttons[2][1].getText())) && (g.window.buttons[2][0].getText().equals(g.window.buttons[2][2].getText()))) ||
+                        ((g.window.buttons[0][0].getText().equals(g.window.buttons[1][0].getText())) && (g.window.buttons[0][0].getText().equals(g.window.buttons[2][0].getText()))) ||
+                        ((g.window.buttons[0][1].getText().equals(g.window.buttons[1][1].getText())) && (g.window.buttons[0][1].getText().equals(g.window.buttons[2][1].getText()))) ||
+                        ((g.window.buttons[0][2].getText().equals(g.window.buttons[1][2].getText())) && (g.window.buttons[0][2].getText().equals(g.window.buttons[2][2].getText()))) ||
+                        ((g.window.buttons[0][0].getText().equals(g.window.buttons[1][1].getText())) && (g.window.buttons[0][0].getText().equals(g.window.buttons[2][2].getText()))) ||
+                        ((g.window.buttons[0][2].getText().equals(g.window.buttons[1][1].getText())) && (g.window.buttons[0][2].getText().equals(g.window.buttons[2][0].getText()))))
+                    {
+                        g.clickCount++;
+                        g.window.buttons[i][j].setEnabled(false);
+                        g.gameWin();
+                        g.chancePlayer1= !g.chancePlayer1;      //change the sign of next click-S
+                        return;
+                    }
+                    g.window.buttons[i][j].setText(pre);
+                }
+            }
+        }
+        
+        for (int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                if(!"O".equals(g.window.buttons[i][j].getText()) && !"X".equals(g.window.buttons[i][j].getText())){
+                    String pre=g.window.buttons[i][j].getText();
                     g.window.buttons[i][j].setText("X");
                     if(((g.window.buttons[0][0].getText().equals(g.window.buttons[0][1].getText())) && (g.window.buttons[0][0].getText().equals(g.window.buttons[0][2].getText()))) || 
                         ((g.window.buttons[1][0].getText().equals(g.window.buttons[1][1].getText())) && (g.window.buttons[1][0].getText().equals(g.window.buttons[1][2].getText()))) ||
